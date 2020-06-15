@@ -814,10 +814,13 @@ Feature: deployment related features
   Scenario: Trigger info is retained for deployment caused by image changes 37 new feature
     Given the master version >= "3.7"
     Given I have a project
-    When I process and create "https://raw.githubusercontent.com/openshift/origin/master/examples/sample-app/application-template-stibuild.json"
-    Then the step should succeed
+    Given I obtain test data file "deployment/OCP-11384/application-template-stibuild.json"
+    When I process and create "application-template-stibuild.json"
     Given the "ruby-sample-build-1" build was created
+    And I wait up to 120 seconds for the steps to pass:
+    """
     And the "ruby-sample-build-1" build completed
+    """
     Given I wait until the status of deployment "frontend" becomes :complete
     When I get project dc named "frontend" as YAML
     Then the output by order should match:
