@@ -90,7 +90,7 @@ Feature: deployment related features
     """
     When I get project dc named "hooks" as JSON
     Then the output should contain:
-      | "latestVersion": 2 |
+      | "updatedReplicas": 2 |
     """
     When I run the :rollback client command with:
       | deployment_name         | hooks-1 |
