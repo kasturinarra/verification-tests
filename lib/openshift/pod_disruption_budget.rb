@@ -1,6 +1,5 @@
 module BushSlicer
   class PodDisruptionBudget < ProjectResource
-    RESOURCE = "poddisruptionbudget.policy"
-
+    RESOURCE = "poddisruptionbudget"
   end
 end
