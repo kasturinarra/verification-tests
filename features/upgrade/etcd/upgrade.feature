@@ -47,11 +47,20 @@ Feature: basic verification for upgrade testing
   Scenario: Check etcd image have been udpated to target release value after upgrade
     # operands
     Given I switch to cluster admin pseudo user
+
+    # operator pod image
     And I use the "openshift-etcd" project
     And a pod becomes ready with labels:
       | app=etcd,etcd=true |
     And evaluation of `pod.container_specs.first.image` is stored in the :etcd_image clipboard
-    And evaluation of `cluster_version('version').image` is stored in the :payload_image clipboard
+
+    # Check cluster version
+    When I run the :get admin command with:
+      | resource | clusterversion/version           |
+      | o        | jsonpath={.status.desired.image} |
+    Then the step should succeed
+    And evaluation of `@result[:response]` is stored in the :payload_image clipboard
+
     Given evaluation of `"oc adm release info --registry-config=/var/lib/kubelet/config.json <%= cb.payload_image %>"` is stored in the :oc_adm_release_info clipboard
     When I store the ready and schedulable masters in the clipboard
     And I use the "<%= cb.nodes[0].name %>" node
