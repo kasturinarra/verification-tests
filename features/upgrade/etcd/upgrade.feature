@@ -58,7 +58,8 @@ Feature: basic verification for upgrade testing
     # due to sensitive, didn't choose to dump and save the config.json file
     # for using the step `I run the :oadm_release_info admin command ...`
     And I run commands on the host:
-      | <%= cb.oc_adm_release_info %> --image-for=etcd |
+      | cat /etc/mco/proxy.env  |
+      | <%= cb.oc_adm_release_info %> --image-for=etcd                  |
     Then the step should succeed
     And the output should contain:
       | <%= cb.etcd_image %> |
