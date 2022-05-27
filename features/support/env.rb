@@ -82,6 +82,7 @@ After do |_scenario|
     raise err
   ensure
     logger.info("=== End After Scenario: #{_scenario.name} ===")
+    BushSlicer::Node.list(user: admin)
     BushSlicer::Logger.reset_runtime # avoid losing output from test case mngr
     manager.test_case_manager.signal(:finish_after_hook, scenario, err)
   end
