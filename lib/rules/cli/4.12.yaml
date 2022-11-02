@@ -23,7 +23,7 @@
   :token: --token=<value>
   :user: --user=<value>
 :annotate:
-  :cmd: oc annotate
+  :cmd: oc annotate --loglevel=8
   :options:
     :all: --all=<value>
     :keyval: <value>
@@ -38,14 +38,14 @@
     :t: -t <value>
     :template: --template=<value>
 :apply:
-  :cmd: oc apply
+  :cmd: oc apply --loglevel=8
   :options:
     :f: -f <value>
     :force: --force=<value>
     :grace-period: --grace-period=<value>
     :overwrite: --overwrite=<value>
 :apply_set_last_applied:
-  :cmd: oc apply set-last-applied
+  :cmd: oc apply set-last-applied --loglevel=8
   :options:
     :f: -f <value>
 :apply_view_last_applied:
@@ -88,25 +88,25 @@
     :restart: --restart=<value>
     :state: --state=<value>
 :config:
-  :cmd: oc config
+  :cmd: oc config --loglevel=8
   :options:
     :subcommand: <value>
 :config_set:
   :cmd: oc config set <prop_name> <prop_value>
 :config_set_cluster:
-  :cmd: oc config set-cluster <name>
+  :cmd: oc config set-cluster <name> --loglevel=8
   :options:
     :cert: --certificate-authority=<value>
     :embed: --embed-certs=<value>
     :server: --server=<value>
 :config_set_context:
-  :cmd: oc config set-context <name>
+  :cmd: oc config set-context <name> --loglevel=8
   :options:
     :cluster: --cluster=<value>
     :namespace: --namespace=<value>
     :user: --user=<value>
 :config_set_creds:
-  :cmd: oc config set-credentials <name>
+  :cmd: oc config set-credentials <name> --loglevel=8
   :options:
     :cert:  --client-certificate=<value>
     :embed:  --embed-certs=<value>
@@ -115,9 +115,9 @@
     :token: --token=<value>
     :user:  --username=<value>
 :config_unset:
-  :cmd: oc config unset <prop_name>
+  :cmd: oc config unset <prop_name> --loglevel=8
 :config_use_context:
-  :cmd: oc config use-context <name>
+  :cmd: oc config use-context <name> --loglevel=8
 :config_view:
   :cmd: oc config view
   :options:
@@ -145,7 +145,7 @@
     :dest: <value>
     :source: <value>
 :create:
-  :cmd: oc create
+  :cmd: oc create --loglevel=8
   :options:
     :f: -f <value>
     :filename: --filename=<value>
@@ -160,25 +160,25 @@
     :hard: --hard=<value>
     :label-selector: --project-label-selector=<value>
 :create_clusterrole:
-  :cmd: oc create clusterrole <name>
+  :cmd: oc create clusterrole <name> --loglevel=8
   :options:
     :resource: --resource=<value>
     :resource-name: --resource-name=<value>
     :verb: --verb=<value>
 :create_clusterrolebinding:
-  :cmd: oc create clusterrolebinding <name>
+  :cmd: oc create clusterrolebinding <name> --loglevel=8
   :options:
     :clusterrole: --clusterrole=<value>
     :group: --group=<value>
     :serviceaccount: --serviceaccount=<value>
 :create_configmap:
-  :cmd: oc create configmap
+  :cmd: oc create configmap --loglevel=8
   :options:
     :from_file: --from-file=<value>
     :from_literal: --from-literal=<value>
     :name: <value>
 :create_cronjob:
-  :cmd: oc create cronjob <name> <global_options> <options>
+  :cmd: oc create cronjob <name> <global_options> <options> --loglevel=8
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
     :dry_run: --dry-run=<value>
@@ -193,7 +193,7 @@
     :template: --template=<value>
     :validate: --validate=<value>
 :create_deployment:
-  :cmd: oc create deployment <name>
+  :cmd: oc create deployment <name> --loglevel=8
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
     :dry_run: --dry-run=<value>
@@ -204,7 +204,7 @@
     :template: --template=<value>
     :validate: --validate=<value>
 :create_deploymentconfig:
-  :cmd: oc create deploymentconfig <name>
+  :cmd: oc create deploymentconfig <name> --loglevel=8
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
     :dry_run: --dry-run=<value>
@@ -213,7 +213,7 @@
     :o: -o <value>
     :template: --template=<value>
 :create_job:
-  :cmd: oc create job <name> <global_options> <options>
+  :cmd: oc create job <name> <global_options> <options> --loglevel=8
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
     :dry_run: --dry-run=<value>
@@ -227,7 +227,7 @@
     :template: --template=<value>
     :validate: --validate=<value>
 :create_namespace:
-  :cmd: oc create namespace <name>
+  :cmd: oc create namespace <name> --loglevel=8
 :create_poddisruptionbudget:
   :cmd: oc create poddisruptionbudget <name>
   :options:
@@ -242,14 +242,14 @@
     :template: --template=<value>
     :validate: --validate=<value>
 :create_quota:
-  :cmd: oc create quota <name>
+  :cmd: oc create quota <name> --loglevel=8
   :options:
     :dry-run: --dry-run=<value>
     :hard: --hard=<value>
     :scopes: --scopes=<value>
     :output: --output=<value>
 :create_rolebinding:
-  :cmd: oc create rolebinding <name>
+  :cmd: oc create rolebinding <name> --loglevel=8
   :options:
     :role: --role=<value>
 :create_route_edge:
@@ -331,7 +331,7 @@
      :output: --output=<value>
      :template: --template=<value>
 :debug:
-  :cmd: oc debug <global_options>
+  :cmd: oc debug <global_options> --loglevel=8
   :options:
      :c: -c <value>
      :dry_run: --dry-run
@@ -350,7 +350,7 @@
      :resource: <value>
      :t: -t
 :delete:
-  :cmd: oc delete
+  :cmd: oc delete --loglevel=8
   :options:
     :all: --all
     #The following 'all' can be used with selectors, like the -l flag.
@@ -364,14 +364,14 @@
     :object_type: <value>
     :wait: --wait=<value>
 :deploy:
-  :cmd: oc deploy <deployment_config>
+  :cmd: oc deploy <deployment_config> --loglevel=8
   :options:
     :cancel: --cancel
     :enable_triggers: --enable-triggers
     :latest: --latest
     :retry: --retry
 :describe:
-  :cmd: oc describe <resource>
+  :cmd: oc describe <resource> --loglevel=8
   :options:
     :f: -f <value>
     :l: -l <value>
@@ -390,7 +390,7 @@
     :output: --output=<value>
 :exec:
   # reorder global_options and options to allow specifying exec command
-  :cmd: oc exec <pod> <global_options> <options>
+  :cmd: oc exec <pod> <global_options> <options> --loglevel=8
   :options:
     :c: -c <value>
     :container: --container=<value>
@@ -427,7 +427,7 @@
     :resource: <value>
     :t: -t <value>
 :expose:
-  :cmd: oc expose <resource> <resource_name>
+  :cmd: oc expose <resource> <resource_name> --loglevel=8
   :options:
     :external_ip: --external-ip=<value>
     :generator: --generator=<value>
@@ -450,7 +450,7 @@
     :arg: <value>
     :cmd_name: <value>
 :extract:
-  :cmd: oc extract
+  :cmd: oc extract --loglevel=8
   :options:
     :confirm: --confirm=<value>
     :f: -f <value>
@@ -459,7 +459,7 @@
     :resource: <value>
     :to: --to=<value>
 :get:
-  :cmd: oc get <resource>
+  :cmd: oc get <resource> --loglevel=8
   :options:
     :a: --show-all=<value>
     :all_namespaces: --all-namespaces=<value>
@@ -479,7 +479,7 @@
     :w: --watch=<value>
     :selector: --selector=<value>
 :help:
-  :cmd: oc help
+  :cmd: oc help --loglevel=8
   :options:
     :command_name: <value>
     # use global `h` and `help` options if needed
@@ -505,7 +505,7 @@
     :s3_source_bucket: --s3-source-bucket=<value>
     :skip_verification: --skip-verification=<value>
 :image_info:
-  :cmd: oc image info <image>
+  :cmd: oc image info <image> --loglevel=8
   :options:
     :a: --registry-config=<value>
     :dir: --dir=<value>
@@ -530,7 +530,7 @@
     :insecure: --insecure=<value>
     :reference-policy: --reference-policy=<value>
 :label:
-  :cmd: oc label <resource>
+  :cmd: oc label <resource> --loglevel=8
   :options:
     :all: --all=<value>
     :key_val: <value>
@@ -539,7 +539,7 @@
     :o: -o <value>
     :overwrite: --overwrite=<value>
 :login:
-  :cmd: oc login
+  :cmd: oc login --loglevel=8
   :options:
     :p: -p <value>
     :password: --password=<value>
@@ -554,11 +554,11 @@
     #   e.g. run multiple times `oc login --username=joe`
     - !ruby/regexp '/Login successful.|ogged into|sing project|new project/'
 :logout:
-  :cmd: oc logout
+  :cmd: oc logout --loglevel=8
   :expected:
     - !ruby/regexp '/Logged ".+" out on/'
 :logs:
-  :cmd: oc logs <resource_name>
+  :cmd: oc logs <resource_name> --loglevel=8
   :options:
     :all_containers: --all-containers=<value>
     :c: -c <value>
@@ -572,7 +572,7 @@
     :timestamps: --timestamps
     :version: --version <value>
 :new_app:
-  :cmd: oc new-app
+  :cmd: oc new-app --loglevel=8
   :options:
     :allow_missing_images: --allow-missing-images=<value>
     :allow_missing_imagestream_tags: --allow-missing-imagestream-tags=<value>
@@ -607,7 +607,7 @@
     :strategy: --strategy=<value>
     :template: --template=<value>
 :new_app_as_dc:
-  :cmd: oc new-app --as-deployment-config
+  :cmd: oc new-app --as-deployment-config --loglevel=8
   :options:
     :app_repo: <value>
     :code: --code=<value>
@@ -650,7 +650,7 @@
     :to : --to=<value>
     :to_docker: --to-docker=<value>
 :new_project:
-  :cmd: oc new-project <project_name>
+  :cmd: oc new-project <project_name> --loglevel=8
   #:expected:
   #  - Created project <project_name>
   :options:
@@ -681,7 +681,7 @@
 :options:
   :cmd: oc options
 :patch:
-  :cmd: oc patch <resource>
+  :cmd: oc patch <resource> --loglevel=8
   :options:
     :p: -p <value>
     :resource_name: <value>
@@ -697,7 +697,7 @@
   :options:
     :role_namespace: --role-namespace=<value>
 :policy_add_role_to_user:
-  :cmd: oc policy add-role-to-user <role>
+  :cmd: oc policy add-role-to-user <role> --loglevel=8
   :options:
     :role_namespace: --role-namespace=<value>
     :rolebinding_name: --rolebinding-name=<value>
@@ -715,32 +715,32 @@
   :options:
     :role_namespace: --role-namespace=<value>
 :policy_remove_role_from_user:
-  :cmd: oc policy remove-role-from-user <role>
+  :cmd: oc policy remove-role-from-user <role> --loglevel=8
   :options:
     :role_namespace: --role-namespace=<value>
     :serviceaccount: -z <value>
     :user_name: <value>
 :policy_scc_review:
-  :cmd: oc policy scc-review
+  :cmd: oc policy scc-review --loglevel=8
   :options:
     :f: -f <value>
     :serviceaccount: -z <value>
 :policy_scc_subject_review:
-  :cmd: oc policy scc-subject-review
+  :cmd: oc policy scc-subject-review --loglevel=8
   :options:
     :f: -f <value>
     :group: -g <value>
     :serviceaccount: -z <value>
     :user: -u <value>
 :policy_who_can:
-  :cmd: oc policy who-can <verb> <resource>
+  :cmd: oc policy who-can <verb> <resource> --loglevel=8
 :port_forward:
-  :cmd: oc port-forward
+  :cmd: oc port-forward --loglevel=8
   :options:
     :pod: <value>
     :port_spec: <value>
 :process:
-  :cmd: oc process
+  :cmd: oc process --loglevel=8
   :options:
     :f: -f <value>
     :l: -l <value>
@@ -750,16 +750,16 @@
     :template: <value>
     :v: --value=<value>
 :project:
-  :cmd: oc project
+  :cmd: oc project --loglevel=8
   :options:
     :project_name: <value>
     :short:  --short=<value>
 :projects:
-  :cmd: oc projects
+  :cmd: oc projects --loglevel=8
   :options:
     :short:  --short=<value>
 :proxy:
-  :cmd: oc proxy
+  :cmd: oc proxy --loglevel=8
   :options:
     :accept_hosts: --accept-hosts=<value>
     :accept_paths: --accept-paths=<value>
@@ -773,7 +773,7 @@
     :www: --www=<value>
     :www_prefix: --www-prefix=<value>
 :replace:
-  :cmd: oc replace
+  :cmd: oc replace --loglevel=8
   :options:
     :cascade: --cascade
     :f: -f <value>
@@ -781,7 +781,7 @@
     :grace_period: --grace-period=<value>
     :output: --output=<value>
 :rollback:
-  :cmd: oc rollback <deployment_name>
+  :cmd: oc rollback <deployment_name> --loglevel=8
   :options:
     :change_scaling_settings: --change-scaling-settings
     :change_strategy: --change-strategy
@@ -791,7 +791,7 @@
     :template: --template=<value>
     :to_version: --to-version=<value>
 :rollout_cancel:
-  :cmd: oc rollout cancel <resource> <name>
+  :cmd: oc rollout cancel <resource> <name> --loglevel=8
   :options:
     :f: -f <value>
     :output: --output=<value>
@@ -801,7 +801,7 @@
     :resource_name: <value>
     :revision: --revision=<value>
 :rollout_latest:
-  :cmd: oc rollout latest <resource>
+  :cmd: oc rollout latest <resource> --loglevel=8
   :options:
       :f: -f <value>
 :rollout_pause:
@@ -828,7 +828,7 @@
     :resource_name: <value>
     :to_revision: --to-revision=<value>
 :rsh:
-  :cmd: oc rsh <global_options> <options>
+  :cmd: oc rsh <global_options> <options> --loglevel=8
   :options:
     :app_name: <value>
     :c: --container=<value>
@@ -842,14 +842,14 @@
   #oc rsync ./local/dir/ POD:/remote/dir
   #oc rsync POD:/remote/dir/ ./local/dir
   #Please reference TC 510666 in features/cli/oc_rsync.feature for an example.
-  :cmd: oc rsync <source> <destination>
+  :cmd: oc rsync <source> <destination> --loglevel=8
   :options:
     :c: --container=<value>
     :delete: --delete=<value>
     :strategy: --strategy=<value>
     :w: --watch=<value>
 :run:
-  :cmd: oc run <name> <global_options> <options>
+  :cmd: oc run <name> <global_options> <options> --loglevel=8
   :options:
     :attach: --attach=<value>
     :cmd: <value>
@@ -876,7 +876,7 @@
     :-t: --template=<value>
     :-o: --output=<value>
 :scale:
-  :cmd: oc scale <resource> <name>
+  :cmd: oc scale <resource> <name> --loglevel=8
   :options:
     :current_replicas: --current-replicas=<value>
     :replicas:  --replicas=<value>
@@ -928,7 +928,7 @@
     :output_version: --output-version=<value>
     :template: --template=<value>
 :secrets_new_sshauth:
-  :cmd: oc secrets new-sshauth <secret_name>
+  :cmd: oc secrets new-sshauth <secret_name> --loglevel=8
   :options:
     :cafile: --ca-cert=<value>
     :gitconfig: --gitconfig=<value>
@@ -940,9 +940,9 @@
 :secret_unlink:
   :cmd: oc secrets unlink serviceaccount/<sa_name> secrets/<secret_name>
 :serviceaccounts_get_token:
-  :cmd: oc serviceaccounts get-token <serviceaccount_name>
+  :cmd: oc serviceaccounts get-token <serviceaccount_name> --loglevel=8
 :serviceaccounts_new_token:
-  :cmd: oc serviceaccounts new-token <serviceaccount_name>
+  :cmd: oc serviceaccounts new-token <serviceaccount_name> --loglevel=8
   :options:
     :labels: --labels=<labels>
     :timeout: --timeout=<timeout_seconds>
@@ -992,7 +992,7 @@
     :remove: --remove
 # We have :set_env since 3.2.
 :set_env:
-  :cmd: oc set env
+  :cmd: oc set env --loglevel=8
   :options:
     :all: --all=<value>
     :c: -c <value>
@@ -1007,7 +1007,7 @@
     :prefix: --prefix=<value>
     :resource: <value>
 :set_image:
-  :cmd: oc set image
+  :cmd: oc set image --loglevel=8
   :options:
     :all: --all=<value>
     :container_image: <value>
@@ -1050,7 +1050,7 @@
     :success_threshold: --success-threshold=<value>
     :timeout_seconds: --timeout-seconds=<value>
 :set_resources:
-  :cmd: oc set resources
+  :cmd: oc set resources --loglevel=8
   :options:
     :c: -c <value>
     :dryrun: --dry-run
@@ -1126,7 +1126,7 @@
     :o: --output=<value>
     :wait: --wait=<value>
 :status:
-  :cmd: oc status
+  :cmd: oc status --loglevel=8
   :options:
     :suggest: --suggest
     :v: -v
@@ -1136,7 +1136,7 @@
     :f: --filename=<value>
     :name: <value>
 :tag:
-  :cmd: oc tag <source>
+  :cmd: oc tag <source> --loglevel=8
   :options:
     :alias: --alias=<value>
     :d: --delete=<value>
@@ -1153,7 +1153,7 @@
 :types:
   :cmd: oc types
 :version:
-  :cmd: oc version
+  :cmd: oc version --loglevel=8
   :expected:
     - Client Version
   :properties:
@@ -1164,7 +1164,7 @@
   :options:
     :o: --output=<value>
 :wait:
-  :cmd: oc wait
+  :cmd: oc wait --loglevel=8
   :options:
     :for:  --for=<value>
     :l:  -l=<value>
@@ -1172,7 +1172,7 @@
     :resource_name: <value>
     :timeout: --timeout=<value>
 :whoami:
-  :cmd: oc whoami
+  :cmd: oc whoami --loglevel=8
   :options:
     :c: -c
     :invalid_option: -b   # for negative testing
@@ -1187,13 +1187,13 @@
     :o: -o <value>
     :trigger_only: --trigger-only=<value>
 :oadm_config_view:
-  :cmd: oc adm config view
+  :cmd: oc adm config view --loglevel=8
   :options:
     :flatten: --flatten
     :minify: --minify
     :raw: --raw
 :oadm_cordon_node:
-  :cmd: oc adm cordon <node_name>
+  :cmd: oc adm cordon <node_name> --loglevel=8
 :oadm_create_login_template:
   :cmd: oc adm create-login-template
 :oadm_create_provider_selection_template:
@@ -1262,7 +1262,7 @@
     :exec_command: <value>
     :exec_command_arg: <value>
 :oadm_new_project:
-  :cmd: oc adm new-project <project_name>
+  :cmd: oc adm new-project <project_name> --loglevel=8
   #:expected:
   #  - Created project <project_name>
   :options:
@@ -1287,68 +1287,68 @@
     :project: <value>
     :selector: --selector=<value>
 :oadm_pod_network_isolate_projects:
-  :cmd: oc adm pod-network isolate-projects
+  :cmd: oc adm pod-network isolate-projects --loglevel=8
   :options:
     :project: <value>
     :selector: --selector=<value>
 :oadm_policy_add_cluster_role_to_group:
-  :cmd: oc adm policy add-cluster-role-to-group <role_name> <group_name>
+  :cmd: oc adm policy add-cluster-role-to-group <role_name> <group_name> --loglevel=8
 :oadm_policy_add_cluster_role_to_user:
-  :cmd: oc adm policy add-cluster-role-to-user <role_name>
+  :cmd: oc adm policy add-cluster-role-to-user <role_name> --loglevel=8
   :options:
     :serviceaccount: --serviceaccount=<value>
     :user_name: <value>
     :z:  -z <value>
 :oadm_policy_add_role_to_group:
-  :cmd: oc adm policy add-role-to-group <role_name> <group_name>
+  :cmd: oc adm policy add-role-to-group <role_name> <group_name> --loglevel=8
   :options:
     :rolebinding_name: --rolebinding-name=<value>
 :oadm_policy_add_role_to_user:
-  :cmd: oc adm policy add-role-to-user <role_name> <user_name>
+  :cmd: oc adm policy add-role-to-user <role_name> <user_name> --loglevel=8
   :options:
     :role_namespace: --role-namespace=<value>
     :rolebinding_name: --rolebinding-name=<value>
 :oadm_policy_add_scc_to_group:
-  :cmd: oc adm policy add-scc-to-group <scc> <group_name>
+  :cmd: oc adm policy add-scc-to-group <scc> <group_name> --loglevel=8
 :oadm_policy_add_scc_to_user:
-  :cmd: oc adm policy add-scc-to-user <scc>
+  :cmd: oc adm policy add-scc-to-user <scc> --loglevel=8
   :options:
     :serviceaccount: --serviceaccount=<value>
     :user_name: <value>
 :oadm_policy_reconcile_cluster_roles:
-  :cmd: oc adm policy reconcile-cluster-roles
+  :cmd: oc adm policy reconcile-cluster-roles --loglevel=8
   :options:
     :confirm: --confirm=<value>
 :oadm_policy_reconcile_sccs:
-  :cmd: oc adm policy reconcile-sccs
+  :cmd: oc adm policy reconcile-sccs --loglevel=8
   :options:
     :additive_only: --additive-only=<value>
     :confirm: --confirm
 :oadm_policy_remove_cluster_role_from_group:
-  :cmd: oc adm policy remove-cluster-role-from-group <role_name> <group_name>
+  :cmd: oc adm policy remove-cluster-role-from-group <role_name> <group_name> --loglevel=8
 :oadm_policy_remove_cluster_role_from_user:
-  :cmd: oc adm policy remove-cluster-role-from-user <role_name>
+  :cmd: oc adm policy remove-cluster-role-from-user <role_name> --loglevel=8
   :options:
     :serviceaccount: --serviceaccount=<value>
     :user_name: <value>
     :z:  -z <value>
 :oadm_policy_remove_role_from_group:
-  :cmd: oc adm policy remove-role-from-group <role_name> <group_name>
+  :cmd: oc adm policy remove-role-from-group <role_name> <group_name> --loglevel=8
 :oadm_policy_remove_role_from_user:
-  :cmd: oc adm policy remove-role-from-user <role_name> <user_name>
+  :cmd: oc adm policy remove-role-from-user <role_name> <user_name> --loglevel=8
 :oadm_policy_remove_scc_from_group:
-  :cmd: oc adm policy remove-scc-from-group <scc> <group_name>
+  :cmd: oc adm policy remove-scc-from-group <scc> <group_name> --loglevel=8
 :oadm_policy_remove_scc_from_user:
-  :cmd: oc adm policy remove-scc-from-user <scc>
+  :cmd: oc adm policy remove-scc-from-user <scc> --loglevel=8 --loglevel=8
   :options:
     :serviceaccount: --serviceaccount=<value>
     :user_name: <value>
 :oadm_policy_who_can:
-  :cmd: oc adm policy who-can <verb> <resource>
+  :cmd: oc adm policy who-can <verb> <resource> --loglevel=8
   :options:
     :all_namespaces: --all-namespaces=<value>
 :oadm_prune_builds:
-  :cmd: oc adm prune builds
+  :cmd: oc adm prune builds --loglevel=8
   :options:
     :confirm: --confirm=<value>
     :keep_complete: --keep-complete=<value>
@@ -1357,7 +1357,7 @@
     :orphans: --orphans=<value>
     :orphans_noopt: --orphans
 :oadm_prune_deployments:
-  :cmd: oc adm prune deployments
+  :cmd: oc adm prune deployments --loglevel=8
   :options:
     :confirm: --confirm=<value>
     :keep_complete: --keep-complete=<value>
@@ -1366,7 +1366,7 @@
     :orphans: --orphans=<value>
     :orphans_noopt: --orphans
 :oadm_prune_images:
-  :cmd: oc adm prune images
+  :cmd: oc adm prune images --loglevel=8
   :options:
     :confirm: --confirm=<value>
     :ignore_invalid_refs: --ignore-invalid-refs=<value>
@@ -1376,13 +1376,13 @@
     :prune_registry: --prune-registry=<value>
     :registry_url: --registry-url=<value>
 :oadm_release_info:
-  :cmd: oc adm release info
+  :cmd: oc adm release info --loglevel=8
   :options:
     :image_for: --image-for=<value>
     :image_name: <value>
     :registry_config: --registry-config=<value>
 :oadm_router:
-  :cmd: oc adm router <name>
+  :cmd: oc adm router <name> --loglevel=8
   :options:
     :canonical_hostname: --router-canonical-hostname=<value>
     :default_cert: --default-cert=<value>
@@ -1400,7 +1400,7 @@
     :stats_port: --stats-port=<value>
     :stats_user: --stats-user=<value>
 :oadm_taint_nodes:
-  :cmd: oc adm taint nodes
+  :cmd: oc adm taint nodes --loglevel=8
   :options:
     :all: --all=<value>
     :key_val: <value>
@@ -1409,11 +1409,11 @@
     :output: --output <value>
     :overwrite: --overwrite=<value>
 :oadm_top_images:
-  :cmd: oc adm top images
+  :cmd: oc adm top images --loglevel=8
 :oadm_uncordon_node:
-  :cmd: oc adm uncordon <node_name>
+  :cmd: oc adm uncordon <node_name> --loglevel=8
 :oadm_upgrade:
-  :cmd: oc adm upgrade
+  :cmd: oc adm upgrade --loglevel=8
   :options:
     :allow_explicit_upgrade: --allow-explicit-upgrade=<value>
     :clear: --clear=<value>
@@ -1422,7 +1422,7 @@
     :to_image: --to-image=<value>
     :to_latest: --to-latest=<value>
 :oadm_version:
-  :cmd: oc version
+  :cmd: oc version --loglevel=8
   :expected:
     - oc v
     - kubernetes v
@@ -1430,7 +1430,7 @@
     :oadm_version: !ruby/regexp '/^oc v(.+)$/'
     :kubernetes_version: !ruby/regexp '/kubernetes v(.+)$/'
 :openshift_version:
-  :cmd: openshift version
+  :cmd: openshift version --loglevel=8
   :expected:
     - openshift v
     - kubernetes v
@@ -1440,16 +1440,16 @@
     :kubernetes_version: !ruby/regexp '/kubernetes v(.+)$/'
     :etcd_version: !ruby/regexp '/etcd (.+)$/'
 :oadm_top_node:
-  :cmd: oc adm top node
+  :cmd: oc adm top node --loglevel=8
   :options:
     :node_name: <value>
 :registry_info:
-  :cmd: oc registry info
+  :cmd: oc registry info --loglevel=8
   :options:
     :internal: --internal=<value>
     :quiet: --quiet=<value>
 :registry_login:
-  :cmd: oc registry login
+  :cmd: oc registry login --loglevel=8
   :options:
     :skip-check: --skip-check=<value>
     :z: -z default
