@@ -88,7 +88,7 @@
     :restart: --restart=<value>
     :state: --state=<value>
 :config:
-  :cmd: oc config
+  :cmd: oc config --loglevel=8
   :options:
     :subcommand: <value>
 :config_set:
@@ -145,7 +145,7 @@
     :dest: <value>
     :source: <value>
 :create:
-  :cmd: oc create
+  :cmd: oc create --loglevel=8
   :options:
     :f: -f <value>
     :filename: --filename=<value>
@@ -172,7 +172,7 @@
     :group: --group=<value>
     :serviceaccount: --serviceaccount=<value>
 :create_configmap:
-  :cmd: oc create configmap
+  :cmd: oc create configmap --loglevel=8
   :options:
     :from_file: --from-file=<value>
     :from_literal: --from-literal=<value>
@@ -318,7 +318,7 @@
 :create_serviceaccount:
   :cmd: oc create serviceaccount <serviceaccount_name>
 :create_token:
-  :cmd: oc create token
+  :cmd: oc create token --loglevel=8
   :options:
     :serviceaccount: <value>
 :create_user:
@@ -350,7 +350,7 @@
      :resource: <value>
      :t: -t
 :delete:
-  :cmd: oc delete
+  :cmd: oc delete --loglevel=8
   :options:
     :all: --all
     #The following 'all' can be used with selectors, like the -l flag.
@@ -371,7 +371,7 @@
     :latest: --latest
     :retry: --retry
 :describe:
-  :cmd: oc describe <resource>
+  :cmd: oc describe --loglevel=8 <resource>
   :options:
     :f: -f <value>
     :l: -l <value>
@@ -530,7 +530,7 @@
     :insecure: --insecure=<value>
     :reference-policy: --reference-policy=<value>
 :label:
-  :cmd: oc label <resource>
+  :cmd: oc label --loglevel=8 <resource>
   :options:
     :all: --all=<value>
     :key_val: <value>
@@ -539,7 +539,7 @@
     :o: -o <value>
     :overwrite: --overwrite=<value>
 :login:
-  :cmd: oc login
+  :cmd: oc login --loglevel=8
   :options:
     :p: -p <value>
     :password: --password=<value>
@@ -554,7 +554,7 @@
     #   e.g. run multiple times `oc login --username=joe`
     - !ruby/regexp '/Login successful.|ogged into|sing project|new project/'
 :logout:
-  :cmd: oc logout
+  :cmd: oc logout --loglevel=8
   :expected:
     - !ruby/regexp '/Logged ".+" out on/'
 :logs:
@@ -572,7 +572,7 @@
     :timestamps: --timestamps
     :version: --version <value>
 :new_app:
-  :cmd: oc new-app
+  :cmd: oc new-app --log-level=8
   :options:
     :allow_missing_images: --allow-missing-images=<value>
     :allow_missing_imagestream_tags: --allow-missing-imagestream-tags=<value>
