@@ -100,6 +100,9 @@ Given /^I run( background)? commands on the host:$/ do |bg, table|
 
   raise "You must set a host prior to running this step" unless host
   @result = host.exec(*table.raw.flatten, background: !!bg)
+  unless @result[:exitstatus] != 0
+      sleep 180
+  end
 end
 
 Given /^I run commands on the host after scenario:$/ do |table|
